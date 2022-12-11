@@ -1,0 +1,42 @@
+<script>
+
+const emp_code1 = document.getElementById('emp_code')
+//const emp_gender1 = document.querySelector('input[name="gender"]:checked')
+var flexi = ''
+var radios = document.getElementsByName('flexi');
+const request_amount = document.getElementById('request_amount')
+var check_user = document.getElementById('check_user')
+
+//const emp_gender1 = document.querySelector('gender:checked').value;
+const btn1 = document.getElementById('btn1')
+//const file1 = document.getElementById('urlimage')
+btn1.addEventListener('click', function(){
+    alert("hahaha")
+
+for (var i = 0, length = radios.length; i < length; i++) {
+  if (radios[i].checked) {
+    // do whatever you want with the checked radio
+    flexi =  radios[i].value;
+
+    // only one radio can be logically checked, don't check the rest
+    break;
+  }
+}
+    var object = {
+        emp_code:  emp_code1.value,
+        emp_flexi : flexi,
+        emp_request_amount: request_amount.value
+    }
+    
+    //var file = file1.files[0] || '';
+    //const fr = new FileReader();
+    console.log(object)
+    //validation
+
+   
+});
+
+
+
+  
+</script>
